@@ -131,7 +131,7 @@ TextToSpeech.OnInitListener, OnClickListener {
 		 
 	}
 	public void onClick(View arg0) {
-		if(tv2.getText().length()==0)
+		if(tv2.getText().length()!=0)
 		{
 			 Cursor cursor4 = db.rawQuery("SELECT engword _id,kameaning FROM engkacustomwords where _id = \""+tv2.getText().toString()+"\"", null);
 			 if(cursor4.moveToFirst())
