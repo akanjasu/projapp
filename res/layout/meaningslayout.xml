@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="5dp">
+    <TextView
+            android:id="@+id/word1"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="word" 
+            android:background="#000000"
+            android:textColor="#FFFFFF"/>
+    <com.example.engkandict.TypefaceAdapter
+            android:id="@+id/definition1"
+            style="@android:style/TextAppearance.Small"
+            android:singleLine="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            android:text="meaning"/>
+
+  
+</LinearLayout>
