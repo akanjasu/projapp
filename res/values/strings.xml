@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">EngKanDict</string>
+    <string name="app_name">ITS for Kannada</string>
     <string name="action_settings">Settings</string>
     <string name="menu_search">Search</string>
-    <string name="title_activity_display_meanings">DisplayMeanings</string>
+    <string name="title_activity_display_meanings">Display Meanings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_eng_or_kan_user">Choose</string>
+    <string name="EngKanUserStr1">Choose Maadi!</string>
+    <string name="KanUserChoice">I am a Kannada speaker</string>
+    <string name="EngUserChoice">I am not a Kannada speaker</string>
+    <string name="title_activity_sign_up">Signup</string>
+    <string name="SignUp">REGISTER</string>
+    <string name="homeURL">http://nammaapp.in</string>
+    <string name="appPrefFIle">appPref</string>
+    <string name="title_activity_choose_start">ChooseStartActivity</string>
+    <string name="displaymeanings">Display Meanings</string>
+    <string name="title_activity_english_home">Home</string>
+    <string name="title_activity_kannada_home">Home</string>
+    <string name="contextDictBtnTxt">Search Context Based Dictionary</string>
+    <string name="phraseDictbtnTxt">Search Phrase Dictionary</string>
+    <string name="title_activity_register">Register</string>
+    <string name="title_activity_dictionary_search">Dictionary Search</string>
+    <string name="title_activity_phrase_search">Phrase Search</string>
 
 </resources>

@@ -1,4 +1,4 @@
-package com.example.engkandict;
+package in.nammaapp.itskannada;
 
 import java.io.IOException;
 import java.util.Locale;

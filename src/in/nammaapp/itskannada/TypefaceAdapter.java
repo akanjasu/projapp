@@ -1,4 +1,4 @@
-package com.example.engkandict;
+package in.nammaapp.itskannada;
 
 import android.content.Context;
 import android.graphics.Typeface;

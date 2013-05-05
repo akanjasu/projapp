@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.engkandict"
+    package="in.nammaapp.itskannada"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -14,16 +14,50 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.engkandict.Home"
+            android:name="in.nammaapp.itskannada.Home"
             android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.DisplayMeanings"
+            android:label="@string/displaymeanings" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.EngOrKanUser"
+            android:label="@string/title_activity_eng_or_kan_user" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.SignUpActivity"
+            android:label="@string/title_activity_sign_up" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.ChooseStartActivity"
+            android:label="@string/title_activity_choose_start" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-         <activity
-             android:name=".DisplayMeanings" />
+        <activity
+            android:name="in.nammaapp.itskannada.EnglishHomeActivity"
+            android:label="@string/title_activity_english_home" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.KannadaHomeActivity"
+            android:label="@string/title_activity_kannada_home" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.RegisterActivity"
+            android:label="@string/title_activity_register" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.DictionarySearchActivity"
+            android:label="@string/title_activity_dictionary_search" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.PhraseSearchActivity"
+            android:label="@string/title_activity_phrase_search" >
+        </activity>
     </application>
 
 </manifest>
