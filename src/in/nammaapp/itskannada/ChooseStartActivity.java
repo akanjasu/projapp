@@ -16,7 +16,7 @@ public class ChooseStartActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_choose_start);
-		pref = getApplicationContext().getSharedPreferences(getResources().getString(R.string.appPrefFIle), Context.MODE_PRIVATE);
+		pref = getApplicationContext().getSharedPreferences("preferencesFile", Context.MODE_PRIVATE);
 		querySelectedUserType = pref.getString("kannada", "notSet");
 		new Handler().postDelayed(new Runnable() {
 			@Override

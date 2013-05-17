@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants"  >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    	android:baselineAligned="false" >
+	<LinearLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_weight=".80"
+	    android:orientation="vertical" >
+    	
+		<TextView
+		    android:id="@+id/txtMyQuestion"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="What is my name?"
+		    android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+			
+		    <TextView
+			    android:id="@+id/txtMyQEngWord"
+			    android:layout_height="wrap_content"
+			    android:layout_width="match_parent"
+			    android:text="ENGLISH WORD: Hello"
+			    android:textSize="10sp" />
+			
+		    <TextView
+			    android:id="@+id/txtMyQKanWord"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:text="KANNADA WORD: Hello"
+			    android:textSize="10sp" />
+		    
+		    <TextView
+			    android:id="@+id/txtMyQRegion"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:text="Region: Mysore"
+			    android:textSize="10sp" />
+	    
+    </LinearLayout>
+
+	<LinearLayout
+    	android:layout_weight=".20"
+    	android:layout_height="wrap_content"
+    	android:layout_width="wrap_content"
+    	android:orientation="vertical" >
+		    
+	        <TextView
+			    android:id="@+id/txtMyQUpVotes"
+			    android:layout_height="wrap_content"
+			    android:layout_width="match_parent"
+			    android:text="Upvotes: 2"
+			    android:gravity="right"
+			    android:textSize="12sp" />
+			
+	        <TextView
+			    android:id="@+id/txtMyQAnswerCount"
+			    android:layout_height="wrap_content"
+			    android:layout_width="match_parent"
+			    android:text="Answers: 3"
+			    android:gravity="right"
+			    android:textSize="12sp" />
+	        
+	        <Button 
+	            android:id="@+id/btnMyQAnswer"
+	            android:layout_height="25dp"
+			    android:layout_width="match_parent"
+			    android:text="Answer it!"
+			    android:textSize="8sp"
+			    android:focusable="false" 
+	            />
+	        
+	        
+	        	
+    
+	</LinearLayout>
+	</LinearLayout>
+
+    	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" >
+	    
+	    <Button 
+	            android:id="@+id/btnMyQEdit"
+	            android:layout_height="25dp"
+			    android:layout_width="wrap_content"
+			    android:layout_weight=".5"
+			    android:text="Edit..."
+			    android:textSize="8sp"
+	            />
+	        
+	    <Button 
+	            android:id="@+id/btnMyQDelete"
+	            android:layout_height="25dp"
+			    android:layout_width="wrap_content"
+			    android:layout_weight=".5"
+			    android:text="Delete..."
+			    android:textSize="8sp"
+	            />
+	    
+	</LinearLayout>
+	
+</LinearLayout>

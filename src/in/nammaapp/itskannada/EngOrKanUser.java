@@ -12,19 +12,21 @@ import android.widget.Button;
 
 public class EngOrKanUser extends Activity {
 	SharedPreferences pref;
+	SharedPreferences.Editor editor;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.eng_or_kan_user);
 		Button btnKannada = (Button) findViewById(R.id.btnKanUserChoice);
 		Button btnEnglish = (Button) findViewById(R.id.btnEngUserChoice);
-		pref = getApplicationContext().getSharedPreferences(getResources().getString(R.string.appPrefFIle), Context.MODE_PRIVATE);
+		pref = getApplicationContext().getSharedPreferences("preferencesFile", Context.MODE_PRIVATE);
 		btnKannada.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				pref.edit().putString("kannada", "true");
-				pref.edit().commit();
+				editor = pref.edit();
+				editor.putString("kannada", "true");
+				editor.commit();
 				Intent i = new Intent(EngOrKanUser.this, SignUpActivity.class);
 				startActivity(i);
 			}
@@ -33,8 +35,9 @@ public class EngOrKanUser extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				pref.edit().putString("kannada", "false");
-				pref.edit().commit();
+				editor = pref.edit();
+				editor.putString("kannada", "false");
+				editor.commit();
 				Intent i = new Intent(EngOrKanUser.this, SignUpActivity.class);
 				startActivity(i);
 			}

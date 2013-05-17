@@ -13,7 +13,7 @@
     <string name="title_activity_sign_up">Signup</string>
     <string name="SignUp">REGISTER</string>
     <string name="homeURL">http://nammaapp.in</string>
-    <string name="appPrefFIle">appPref</string>
+    <string name="appPrefFile">appPref</string>
     <string name="title_activity_choose_start">ChooseStartActivity</string>
     <string name="displaymeanings">Display Meanings</string>
     <string name="title_activity_english_home">Home</string>
@@ -23,5 +23,55 @@
     <string name="title_activity_register">Register</string>
     <string name="title_activity_dictionary_search">Dictionary Search</string>
     <string name="title_activity_phrase_search">Phrase Search</string>
+
+    <string-array name="region_arrays">
+        <item>Mysore</item>
+        <item>Hyderabad-Karnataka</item>
+        <item>Hubli-Dharwad-Gadag-Haveri</item>
+        <item>Belgaum</item>
+        <item>Karwar-North Canara</item>
+        <item>Mangalore-Udupi-South Canara</item>
+        <item>Kodagu</item>
+        <item>Kolar-Pavgada</item>
+        <item>Bangalore</item>
+        <item>Bellary</item>
+        <item>Davangere-Chitradurga</item>
+        <item>Bijapur-Bagalkot</item>
+        <item>Hassan-Chikmagaluru</item>
+        <item>Shivamogga</item>
+        <item>Mandya-Kanakapura-Magadi-Kunigal-Chamaraajanagar</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="title_activity_request_phrase_translate">Request Phrase Translate</string>
+    <string name="title_activity_search_forum">Search the Forum</string>
+    <string name="title_activity_learning_module">Learning Module</string>
+    <string name="title_activity_dict_search">Dictionary Search</string>
+    <string name="title_activity_question">Ask a Question</string>
+    <string name="title_activity_forum">Forum</string>
+    <string name="title_activity_phrase_request">Phrase Request...</string>
+    <string name="title_activity_word_context_res">Word + Context Resolution</string>
+    <string name="title_activity_notifications">Notifications</string>
+    <string name="title_activity_points">Points and Badges</string>
+    <string name="title_activity_pronunciation">Pronunciation</string>
+    <string name="title_activity_eval">Evaluator</string>
+    <string name="title_activity_my_home">My Home</string>
+    <string name="title_activity_question_display">Question Display</string>
+    <string name="title_activity_add_answer">Add Answer</string>
+    <string name="title_activity_my_questions">My Questions</string>
+    <string name="title_activity_my_answers">Questions I Answered</string>
+    <string name="title_activity_my_question_display">My Questions</string>
+
+    <color name="black">#000000</color>
+    <color name="green">#00FF00</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#D6D2D4</color>
+
+    <string name="title_activity_learn">Learn</string>
+    <string name="title_activity_kan_words_test">Kannada Word Test</string>
+    <string name="title_activity_learn_phrase">Learn Phrases</string>
+    <string name="title_activity_sync">Sync</string>
+    <string name="title_activity_context_search_home">Context Based Search</string>
+    <string name="title_activity_context_display_meaning">Context Based Meaning</string>
 
 </resources>

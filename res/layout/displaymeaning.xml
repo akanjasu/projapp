@@ -15,7 +15,7 @@
         android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/textView1"
         android:layout_marginTop="24dp"
-        android:onClick="onClick"
+        android:hint="kan"
          />
 
     <TextView
@@ -26,17 +26,17 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="26dp"
         android:layout_marginTop="17dp"
+        android:hint="eng"
        
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView1"
+        android:layout_alignRight="@+id/suggestionlist"
         android:layout_below="@+id/textView2"
-        android:layout_marginTop="18dp"
-       
+        android:layout_marginTop="16dp"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <ListView
@@ -47,5 +47,16 @@
         android:layout_below="@+id/textView3"
         android:layout_marginTop="28dp" >
     </ListView>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignParentTop="true"
+        android:textColor="#FF0000"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+
     
 </RelativeLayout>

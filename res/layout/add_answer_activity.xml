@@ -1,0 +1,240 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AddAnswerActivity" >
+
+<LinearLayout
+    android:id="@+id/ansactq"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"  >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    	android:baselineAligned="false" >
+	<LinearLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_weight=".80"
+	    android:orientation="vertical" >
+    	
+		<TextView
+		    android:id="@+id/txtQuestionAA"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="What is my name?"
+		    android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+			
+		    <TextView
+			    android:id="@+id/txtQEngWordAA"
+			    android:layout_height="wrap_content"
+			    android:layout_width="match_parent"
+			    android:text="ENGLISH WORD: Hello"
+			    android:textSize="10sp" />
+			
+		    <TextView
+			    android:id="@+id/txtQKanWordAA"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:text="KANNADA WORD: Hello"
+			    android:textSize="10sp" />
+		    
+		    <TextView
+			    android:id="@+id/txtQRegionAA"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:text="Region: Mysore"
+			    android:textSize="10sp" />
+	    
+    </LinearLayout>
+
+	<LinearLayout
+    	android:layout_weight=".20"
+    	android:layout_height="wrap_content"
+    	android:layout_width="wrap_content"
+    	android:orientation="vertical" >
+		    
+	        <TextView
+			    android:id="@+id/txtQUpVotesAA"
+			    android:layout_height="wrap_content"
+			    android:layout_width="match_parent"
+			    android:text="Upvotes: 2"
+			    android:gravity="right"
+			    android:textSize="12sp" />
+			
+	        <TextView
+			    android:id="@+id/txtQAnswerCountAA"
+			    android:layout_height="wrap_content"
+			    android:layout_width="match_parent"
+			    android:text="Answers: 3"
+			    android:gravity="right"
+			    android:textSize="12sp" />
+	        
+	        
+	        	
+    
+	</LinearLayout>
+	</LinearLayout>
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" >
+    
+        <TextView
+			    android:id="@+id/txtQUsernameAA"
+			    android:layout_height="wrap_content"
+			    android:layout_width="match_parent"
+			    android:text="Username: "
+			    android:layout_weight=".25"
+			    android:gravity="left"
+			    android:textSize="10sp"
+			    android:textStyle="bold" />
+        
+        <TextView
+			    android:id="@+id/txtQXPAA"
+			    android:layout_height="wrap_content"
+			    android:layout_width="match_parent"
+			    android:text="XP:"
+			    android:layout_weight=".25"
+			    android:gravity="left"
+			    android:textSize="10sp" />
+        
+        <TextView
+			    android:id="@+id/txtQQUpAA"
+			    android:layout_height="wrap_content"
+			    android:layout_width="match_parent"
+			    android:text="Q Up:"
+			    android:layout_weight=".25"
+			    android:gravity="left"
+			    android:textSize="10sp" />
+        
+        <TextView
+			    android:id="@+id/txtQAUpAA"
+			    android:layout_height="wrap_content"
+			    android:layout_width="match_parent"
+			    android:text="A Up:"
+			    android:layout_weight=".25"
+			    android:gravity="left"
+			    android:textSize="10sp" />
+        
+        </LinearLayout>
+	
+</LinearLayout>
+
+		<TextView
+		    android:id="@+id/title"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/ansactq"
+		    android:layout_alignParentLeft="true"
+		    android:layout_marginTop="17dp"
+		    android:gravity="center"
+		    android:text="Add your Answer.."
+		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		<TextView
+		    android:id="@+id/anstitle"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/title"
+		    android:layout_marginTop="15dp"
+		    android:gravity="left"
+		    android:text="Answer:"
+		    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+		<EditText
+		    android:id="@+id/ansContent"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/anstitle"
+		    android:ems="10"
+		    android:inputType="textMultiLine" >
+
+		    <requestFocus />
+		</EditText>
+		
+		<TextView
+		    android:id="@+id/regiontitle"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/ansContent"
+		    android:gravity="left"
+		    android:text="Region:"
+		    android:textAppearance="?android:attr/textAppearanceSmall" />
+		
+		<Spinner
+	        android:id="@+id/spnRegion4ans"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/regiontitle"
+	        android:entries="@array/region_arrays" />
+		
+		<TextView
+		    android:id="@+id/engwordtitle"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/spnRegion4ans"
+		    android:gravity="left"
+		    android:text="Enter English Word on which the answer is (Optional):"
+		    android:textSize="12sp" />
+
+		<EditText
+		    android:id="@+id/engwordContent"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/engwordtitle"
+		    android:ems="10" />
+		
+		<TextView
+		    android:id="@+id/kanwordtitle"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/engwordContent"
+		    android:gravity="left"
+		    android:text="Enter Kannada Word on which the answer is (Optional):"
+		    android:textSize="11sp" />
+
+		<EditText
+		    android:id="@+id/kanwordContent"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/kanwordtitle"
+		    android:ems="10" />
+
+		<Button
+		    android:id="@+id/buttonPronunceCapture"
+		    style="?android:attr/buttonStyleSmall"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/kanwordContent"
+		    android:text="Provide Pronunciation"
+		    android:textSize="10sp" />
+
+		<Button
+		    android:id="@+id/buttonSubmitAnswer"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentRight="true"
+		    android:layout_below="@+id/kanwordContent"
+		    android:text="SUBMIT" />
+		
+</RelativeLayout>

@@ -20,7 +20,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-public class Home extends Activity {
+public class EngKanDictSearch extends Activity {
 	private static final int REQUEST_CODE = 1234;
 	private ListView wordsList;
 	private EditText etext;
@@ -33,7 +33,7 @@ public class Home extends Activity {
 	  Button speakButton = (Button) findViewById(R.id.spkbtn);
 	   searchbtn = (Button) findViewById(R.id.searchbtn);
       wordsList = (ListView) findViewById(R.id.list);
-   etext=(EditText)findViewById(R.id.etext);
+      etext=(EditText)findViewById(R.id.etext);
 		
        // Disable button if no recognition service is present
        PackageManager pm = getPackageManager();
@@ -44,12 +44,13 @@ public class Home extends Activity {
            speakButton.setEnabled(false);
            speakButton.setText("no");
        }	
-   	searchbtn.setOnClickListener(new OnClickListener() {
+       
+      searchbtn.setOnClickListener(new OnClickListener() {
 		public void onClick(View arg)
 		{
 			if(etext.getText().toString().length()!=0)
 			{
-		Intent i = new Intent(Home.this,DisplayMeanings.class);
+		Intent i = new Intent(EngKanDictSearch.this,DisplayMeanings.class);
 		i.putExtra("searchword",etext.getText().toString());
 		startActivity(i);
 		}}

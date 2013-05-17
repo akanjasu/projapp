@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:baselineAligned="false" >
+    
+    
+	<LinearLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_weight=".80"
+	    android:orientation="vertical" >
+    	
+		<TextView
+		    android:id="@+id/txtAnswer"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="What is my name?"
+		    android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+			
+		    <TextView
+			    android:id="@+id/txtAEngWord"
+			    android:layout_height="wrap_content"
+			    android:layout_width="wrap_content"
+			    android:text="ENGLISH WORD: Hello"
+			    android:textSize="10sp" />
+			
+		    <TextView
+			    android:id="@+id/txtAKanWord"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="KANNADA WORD: Hello"
+			    android:textSize="10sp" />
+		    
+		    <TextView
+			    android:id="@+id/txtARegion"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:text="Region: Mysore"
+			    android:textSize="10sp" />
+	    
+	    
+    </LinearLayout>
+
+	<LinearLayout
+    	android:layout_weight=".20"
+    	android:layout_height="wrap_content"
+    	android:layout_width="wrap_content"
+    	android:orientation="vertical" >
+		    
+	        <TextView
+			    android:id="@+id/txtAUpVotes"
+			    android:layout_height="wrap_content"
+			    android:layout_width="match_parent"
+			    android:text="Upvotes: 2"
+			    android:gravity="right"
+			    android:textSize="12sp" />
+			
+	        <TextView
+			    android:id="@+id/txtAAccepted"
+			    android:layout_height="wrap_content"
+			    android:layout_width="match_parent"
+			    android:text="Accepted Answer"
+			    android:gravity="right"
+			    android:textSize="10sp" />
+	        
+	        <Button 
+	            android:id="@+id/btnpronunceWord"
+	            android:layout_height="25dp"
+			    android:layout_width="match_parent"
+			    android:text="Pronunce it!"
+			    android:textSize="8sp"
+	            />
+				
+    
+		</LinearLayout>
+	</LinearLayout>
+	
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" >
+    
+        <TextView
+			    android:id="@+id/txtAUsername"
+			    android:layout_height="wrap_content"
+			    android:layout_width="match_parent"
+			    android:text="Username: "
+			    android:layout_weight=".25"
+			    android:gravity="left"
+			    android:textSize="10sp"
+			    android:textStyle="bold" />
+        
+        <TextView
+			    android:id="@+id/txtAUXP"
+			    android:layout_height="wrap_content"
+			    android:layout_width="match_parent"
+			    android:text="XP:"
+			    android:layout_weight=".25"
+			    android:gravity="left"
+			    android:textSize="10sp" />
+        
+        <TextView
+			    android:id="@+id/txtAUQUp"
+			    android:layout_height="wrap_content"
+			    android:layout_width="match_parent"
+			    android:text="Q Up:"
+			    android:layout_weight=".25"
+			    android:gravity="left"
+			    android:textSize="10sp" />
+        
+        <TextView
+			    android:id="@+id/txtAUAUp"
+			    android:layout_height="wrap_content"
+			    android:layout_width="match_parent"
+			    android:text="A Up:"
+			    android:layout_weight=".25"
+			    android:gravity="left"
+			    android:textSize="10sp" />
+        
+        </LinearLayout>
+			
+    
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" >
+    
+	        <Button 
+	            android:id="@+id/btnAUpvote"
+	            android:layout_height="25dp"
+			    android:layout_width="wrap_content"
+			    android:layout_weight=".5"
+			    android:text="Upvote IT!"
+			    android:textSize="8sp"
+	            />
+	        
+	        <Button 
+	            android:id="@+id/btnADownvote"
+	            android:layout_height="25dp"
+			    android:layout_width="wrap_content"
+			    android:layout_weight=".5"
+			    android:text="Downvote..."
+			    android:textSize="8sp"
+	            />
+	        
+	</LinearLayout>
+</LinearLayout>

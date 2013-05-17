@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".QuestionActivity" >
+
+    <TextView
+        android:id="@+id/QuesHtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Add Question..."
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <TextView
+		    android:id="@+id/Questitle"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/QuesHtitle"
+		    android:layout_marginTop="15dp"
+		    android:gravity="left"
+		    android:text="Question:"
+		    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+		<EditText
+		    android:id="@+id/quesContent"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/Questitle"
+		    android:ems="10"
+		    android:inputType="textMultiLine" >
+
+		    <requestFocus />
+		</EditText>
+		
+		<TextView
+		    android:id="@+id/Quesregiontitle"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/quesContent"
+		    android:gravity="left"
+		    android:text="Region:"
+		    android:textAppearance="?android:attr/textAppearanceSmall" />
+		
+		<Spinner
+	        android:id="@+id/spnRegion4ques"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/Quesregiontitle"
+	        android:entries="@array/region_arrays" />
+		
+		<TextView
+		    android:id="@+id/Quesengwordtitle"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/spnRegion4ques"
+		    android:gravity="left"
+		    android:text="Enter English Word on which the question is (Optional):"
+		    android:textSize="11sp" />
+
+		<EditText
+		    android:id="@+id/QuesengwordContent"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/Quesengwordtitle"
+		    android:ems="10" />
+		
+		<TextView
+		    android:id="@+id/Queskanwordtitle"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/QuesengwordContent"
+		    android:gravity="left"
+		    android:text="Enter Kannada Word on which the question is (Optional):"
+		    android:textSize="11sp" />
+
+		<EditText
+		    android:id="@+id/QueskanwordContent"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/Queskanwordtitle"
+		    android:ems="10" />
+
+		<Button
+		    android:id="@+id/buttonSubmitQuestion"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentRight="true"
+		    android:layout_below="@+id/QueskanwordContent"
+		    android:text="SUBMIT" />
+
+</RelativeLayout>

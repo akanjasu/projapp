@@ -13,43 +13,12 @@ import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBahelper extends SQLiteOpenHelper{
-	/* public DBahelper(Context context) {
-	        super(context, DATABASE_NAME, null, DATABASE_VERSION);
-	    }
-	  public static final int DATABASE_VERSION = 1;
-	    public static final String DATABASE_NAME = "FeedReader.db";
-	    private static final String TEXT_TYPE = " TEXT";
-	    private static final String COMMA_SEP = ",";
-	    private static final String SQL_CREATE_ENTRIES =
-	        "CREATE TABLE " + DBaclass.DBaEntry.TABLE_NAME + " (" +
-	        DBaclass.DBaEntry._ID + " INTEGER PRIMARY KEY," +
-	        DBaclass.DBaEntry.COLUMN_NAME_ENTRY_ID + TEXT_TYPE + COMMA_SEP +
-	        DBaclass.DBaEntry.COLUMN_NAME_TITLE + TEXT_TYPE + COMMA_SEP +
-	         // Any other options for the CREATE command
-	        " )";
 
-	    private static final String SQL_DELETE_ENTRIES =
-	        "DROP TABLE IF EXISTS ";
-	   
-	    public void onCreate(SQLiteDatabase db) {
-	    	
-	    		  SQLiteDBDeploy.deploy(this.context, db, "northwind.zip");
-	    		 
-	    }
-	    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-	        // This database is only a cache for online data, so its upgrade policy is
-	        // to simply to discard the data and start over
-	        db.execSQL(SQL_DELETE_ENTRIES);
-	        onCreate(db);
-	    }
-	    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-	        onUpgrade(db, oldVersion, newVersion);
-	    }*/
 
     //The Android's default system path of your application database.
-    private static String DB_PATH =  "/data/data/com.example.engkandict/databases/";
+    private static String DB_PATH =  "/data/data/in.nammaapp.itskannada/databases/";
  
-    private static String DB_NAME = "test.db";
+    private static String DB_NAME = "clientdb.db";
  
     private SQLiteDatabase myDataBase; 
  
@@ -79,7 +48,7 @@ public class DBahelper extends SQLiteOpenHelper{
  
     		//By calling this method and empty database will be created into the default system path
                //of your application so we are gonna be able to overwrite that database with our database.
-        	this.getReadableDatabase();
+        	this.getWritableDatabase();
  
         	try {
  

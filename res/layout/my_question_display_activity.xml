@@ -1,0 +1,177 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MyQuestionDisplayActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".80"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/txtMyQuestionA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="What is my name?"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/txtMyQEngWordA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ENGLISH WORD: Hello"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/txtMyQKanWordA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="KANNADA WORD: Hello"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/txtMyQRegionA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Region: Mysore"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".20"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/txtMyQUpVotesA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Upvotes: 2"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txtMyQAnswerCountA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Answers: 3"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnQAnswerA"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:text="Answer it!"
+                    android:textSize="8sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txtQUsernameA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:gravity="left"
+                android:text="Username: "
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtQXPA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:gravity="left"
+                android:text="XP:"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/txtQQUpA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:gravity="left"
+                android:text="Q Up:"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/txtQAUpA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:gravity="left"
+                android:text="A Up:"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            
+            <Button
+                android:id="@+id/btnQUpvoteA"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_weight=".5"
+                android:text="Upvote IT!"
+                android:textSize="8sp" />
+
+            <Button
+                android:id="@+id/btnQDownvoteA"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_weight=".5"
+                android:text="Downvote..."
+                android:textSize="8sp" />
+        </LinearLayout>
+    </LinearLayout>
+	
+    <TextView
+                android:id="@+id/textView1x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:layout_below="@+id/linearLayout1"
+                android:layout_alignLeft="@+id/linearLayout1"
+                android:gravity="center"
+                android:text="ANSWERS"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+     <ListView
+        android:id="@+id/Alist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1x"
+        android:layout_below="@+id/textView1x" >
+    </ListView>  
+
+</RelativeLayout>

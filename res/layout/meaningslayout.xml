@@ -11,7 +11,7 @@
             android:text="word" 
             android:background="#000000"
             android:textColor="#FFFFFF"/>
-    <in.nammaapp.itskannada.TypefaceAdapter
+    <com.example.engkandict.TypefaceAdapter
             android:id="@+id/definition1"
             style="@android:style/TextAppearance.Small"
             android:singleLine="true"

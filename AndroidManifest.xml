@@ -8,13 +8,16 @@
         android:minSdkVersion="11"
         android:targetSdkVersion="15" />
 
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="in.nammaapp.itskannada.Home"
+            android:name="in.nammaapp.itskannada.EngKanDictSearch"
             android:label="@string/app_name" >
         </activity>
         <activity
@@ -57,6 +60,102 @@
         <activity
             android:name="in.nammaapp.itskannada.PhraseSearchActivity"
             android:label="@string/title_activity_phrase_search" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.RequestPhraseTranslateActivity"
+            android:label="@string/title_activity_request_phrase_translate" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.SearchActivity"
+            android:label="@string/title_activity_search_forum" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.TutorOptions"
+            android:label="@string/title_activity_learning_module" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.DictSearchActivity"
+            android:label="@string/title_activity_dict_search" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.QuestionActivity"
+            android:label="@string/title_activity_question" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.ForumHomeActivity"
+            android:label="@string/title_activity_forum" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.ResponsePhraseTranslateActivity"
+            android:label="@string/title_activity_phrase_request" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.WordContextResActivity"
+            android:label="@string/title_activity_word_context_res" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.NotificationsActivity"
+            android:label="@string/title_activity_notifications" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.PointsActivity"
+            android:label="@string/title_activity_points" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.PronunciationActivity"
+            android:label="@string/title_activity_pronunciation" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.EvalActivity"
+            android:label="@string/title_activity_eval" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.MyHomeActivity"
+            android:label="@string/title_activity_my_home" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.QuestionDisplayActivity"
+            android:label="@string/title_activity_question_display" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.AddAnswerActivity"
+            android:label="@string/title_activity_add_answer" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.MyQuestionsActivity"
+            android:label="@string/title_activity_my_questions" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.MyAnswersActivity"
+            android:label="@string/title_activity_my_answers" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.MyQuestionDisplayActivity"
+            android:label="@string/title_activity_my_question_display" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.LearnActivity"
+            android:label="@string/title_activity_learn" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.KanWordsTestActivity"
+            android:label="@string/title_activity_kan_words_test" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.LearnPhraseActivity"
+            android:label="@string/title_activity_learn_phrase" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.SyncActivity"
+            android:label="@string/title_activity_sync" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.ContextSearchHome"
+            android:label="@string/title_activity_context_search_home" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.ContextDisplayMeaningActivity"
+            android:label="@string/title_activity_context_display_meaning" >
         </activity>
     </application>
 

@@ -8,6 +8,6 @@
                     android:layout_centerHorizontal="true"
                     android:gravity="center"
                     android:layout_marginTop="200dp"
-                    android:text="Splash Screen!"
+                    android:text="ITS FOR KANNADA"
                     android:textAppearance="?android:attr/textAppearanceLarge"/>
   </RelativeLayout>
