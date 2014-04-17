@@ -30,6 +30,13 @@
 	    android:text="Kan Phrase: "
 	    android:textAppearance="?android:attr/textAppearanceMedium" />
     
+    <TextView
+	    android:id="@+id/txtKUPhraseRegion"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="Region: "
+	    android:textAppearance="?android:attr/textAppearanceSmall" />
+    
     
     </LinearLayout>
     

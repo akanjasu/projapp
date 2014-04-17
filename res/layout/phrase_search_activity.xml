@@ -8,9 +8,38 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".PhraseSearchActivity" >
 
-    <TextView
+    <EditText
+        android:id="@+id/phraseText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="23dp"
+        android:layout_toLeftOf="@+id/phrasebtn"
+        android:ems="10"
+        android:hint="             Type Here"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <ImageButton
+        android:id="@+id/phrasebtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/phraseText"
+        android:layout_alignParentRight="true"
+        android:background="#000000"
+        android:src="@drawable/search" />
+
+    <TextView
+        android:id="@+id/phrase"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/phraseText"
+        android:layout_below="@+id/phraseText"
+        android:layout_marginTop="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

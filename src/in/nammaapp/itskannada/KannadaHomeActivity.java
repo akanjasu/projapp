@@ -1,9 +1,7 @@
 package in.nammaapp.itskannada;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -18,49 +16,29 @@ public class KannadaHomeActivity extends Activity {
 		setContentView(R.layout.kannada_home_activity);
 		
 		Button btnResPhrase = (Button) findViewById(R.id.btnResPhrase);
-		Button btnPrnWord = (Button) findViewById(R.id.btnPrnWord);
 		Button btnResWord = (Button) findViewById(R.id.btnResWord);
 		Button btnAnsQuestion = (Button) findViewById(R.id.btnAnsQuestion);
 		Button btnEval = (Button) findViewById(R.id.btnEval);
 		Button btnKanQuestion = (Button) findViewById(R.id.btnKanQuestion);
 		Button btnkanForum = (Button) findViewById(R.id.btnkanForum);
-		Button btnKanNotif = (Button) findViewById(R.id.btnKanNotif);
-		Button btnKanBadge = (Button) findViewById(R.id.btnKanBadge);
-		Button btnMyHome = (Button) findViewById(R.id.btnKanMyHome);
 		
-		btnMyHome.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent i = new Intent(KannadaHomeActivity.this, MyHomeActivity.class);
-				startActivity(i);
-				
-			}
-		});
+		
 		
 		btnResPhrase.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(KannadaHomeActivity.this, ResponsePhraseTranslateActivity.class);
+				Intent i = new Intent(KannadaHomeActivity.this, KanPhraseHomeActivity.class);
 				startActivity(i);
 			}
 		});
-		
-		btnPrnWord.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent i = new Intent(KannadaHomeActivity.this, PronunciationActivity.class);
-				startActivity(i);
-			}
-		});
+
 		
 		btnResWord.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(KannadaHomeActivity.this, WordContextResActivity.class);
+				Intent i = new Intent(KannadaHomeActivity.this, ContextKanHomeActivity.class);
 				startActivity(i);
 			}
 		});
@@ -76,13 +54,7 @@ public class KannadaHomeActivity extends Activity {
 				startActivity(i);
 			}
 		});
-		SharedPreferences pref = getApplicationContext().getSharedPreferences(getResources().getString(R.string.appPrefFile), Context.MODE_PRIVATE);
-		int xp = Integer.parseInt(pref.getString("xp", "-1"));
-		if(xp == -1 || xp < 200) {
-			btnEval.setEnabled(false);
-			btnEval.setText(btnEval.getText().toString() + " (Needs 200 XP)");
-		} else {
-			btnEval.setOnClickListener(new OnClickListener() {
+		btnEval.setOnClickListener(new OnClickListener() {
 				
 				@Override
 				public void onClick(View v) {
@@ -90,7 +62,7 @@ public class KannadaHomeActivity extends Activity {
 					startActivity(i);
 				}
 			});
-		}
+		
 		
 		btnKanQuestion.setOnClickListener(new OnClickListener() {
 			
@@ -109,24 +81,7 @@ public class KannadaHomeActivity extends Activity {
 				startActivity(i);
 			}
 		});
-		
-		btnKanNotif.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent i = new Intent(KannadaHomeActivity.this, NotificationsActivity.class);
-				startActivity(i);
-			}
-		});
-		
-		btnKanBadge.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent i = new Intent(KannadaHomeActivity.this, PointsActivity.class);
-				startActivity(i);
-			}
-		});
+
 
 	}
 

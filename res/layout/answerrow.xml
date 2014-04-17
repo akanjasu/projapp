@@ -72,14 +72,6 @@
 			    android:text="Accepted Answer"
 			    android:gravity="right"
 			    android:textSize="10sp" />
-	        
-	        <Button 
-	            android:id="@+id/btnpronunceWord"
-	            android:layout_height="25dp"
-			    android:layout_width="match_parent"
-			    android:text="Pronunce it!"
-			    android:textSize="8sp"
-	            />
 				
     
 		</LinearLayout>
@@ -141,6 +133,7 @@
 			    android:layout_width="wrap_content"
 			    android:layout_weight=".5"
 			    android:text="Upvote IT!"
+			    android:drawableRight="@drawable/good"
 			    android:textSize="8sp"
 	            />
 	        
@@ -149,7 +142,8 @@
 	            android:layout_height="25dp"
 			    android:layout_width="wrap_content"
 			    android:layout_weight=".5"
-			    android:text="Downvote..."
+			    android:text="Downvote!"
+			    android:drawableRight="@drawable/bad"
 			    android:textSize="8sp"
 	            />
 	        

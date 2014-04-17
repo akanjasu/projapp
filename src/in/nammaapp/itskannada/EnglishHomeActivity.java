@@ -22,9 +22,7 @@ public class EnglishHomeActivity extends Activity {
 		Button btnForum = (Button) findViewById(R.id.btnForum);
 		Button btnPhraseRequest = (Button) findViewById(R.id.btnPhraseRequest);
 		Button btnWordContext = (Button) findViewById(R.id.btnWordContext);
-		Button btnEngNotif = (Button) findViewById(R.id.btnEngNotif);
 		Button btnEngBadge = (Button) findViewById(R.id.btnEngBadge);
-		Button btnMyHome = (Button) findViewById(R.id.btnEngMyHome);
 		Button syncDB = (Button) findViewById(R.id.btnsyncDB);
 		
 		syncDB.setOnClickListener(new OnClickListener() {
@@ -36,16 +34,7 @@ public class EnglishHomeActivity extends Activity {
 			}
 		});
 		
-		btnMyHome.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent i = new Intent(EnglishHomeActivity.this, MyHomeActivity.class);
-				startActivity(i);
 				
-			}
-		});
-		
 		//Onclick listeners for all the buttons
 		btnPhrase.setOnClickListener(new OnClickListener() {
 			
@@ -105,7 +94,7 @@ public class EnglishHomeActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(EnglishHomeActivity.this, RequestPhraseTranslateActivity.class);
+				Intent i = new Intent(EnglishHomeActivity.this, EngPhraseRequestHomeActivity.class);
 				startActivity(i);
 			}
 		});
@@ -114,16 +103,7 @@ public class EnglishHomeActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(EnglishHomeActivity.this, WordContextResActivity.class);
-				startActivity(i);
-			}
-		});
-		
-		btnEngNotif.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent i = new Intent(EnglishHomeActivity.this, NotificationsActivity.class);
+				Intent i = new Intent(EnglishHomeActivity.this, ContextRequestEngHomeActivity.class);
 				startActivity(i);
 			}
 		});

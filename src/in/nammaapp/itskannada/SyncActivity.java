@@ -74,6 +74,7 @@ private static ArrayList<Elements> ar;
 			
 			@Override
 			public void onClick(View v) {
+				ar.clear();
 				// TODO Auto-generated method stub
 				new AsyncTask<String,Void,String>(){
 

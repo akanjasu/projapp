@@ -99,10 +99,10 @@ public class ForumHomeActivity extends Activity {
 					q.setUpvotes(e1.get(6).text());
 					q.setAnscount(e1.get(7).text());
 					q.setUserID(e1.get(8).text());
-					q.setXp(e1.get(9).text());
-					q.setQupvote(e1.get(10).text());
-					q.setAupvote(e1.get(11).text());
-					q.setRegion(e1.get(12).text());
+					q.setXp(e1.get(9).text().toString());
+					q.setQupvote(e1.get(10).text().toString());
+					q.setAupvote(e1.get(11).text().toString());
+					q.setRegion(e1.get(12).text().toString());
 					questions.add(q);
 				}
 				l = (ListView) findViewById(R.id.Qlist);
@@ -164,12 +164,12 @@ public class ForumHomeActivity extends Activity {
                 question.setText(item.getQuestion());
                 engword.setText("ENG Word:" + item.getEngword());
                 kanword.setText("KAN Word: " + item.getKanword());
-                upvotes.setText("Upvotes: " + item.getUpvotes());
+                upvotes.setText("Upvotes: " + item.getUpvotes().toString());
                 answercount.setText("Answers: " + item.getAnscount());
                 name.setText(item.getName());
-                xp.setText("XP: " + item.getXp());
-                Qupvotes.setText("Q Up: "+ item.getQupvote());
-                Ansupvotes.setText("A Up: " + item.getAupvote());
+                xp.setText("");
+                Qupvotes.setText("");
+                Ansupvotes.setText("");
                 String [] s = getResources().getStringArray(R.array.region_arrays);
                 if(item.getRegion().length() > 0)
                 	regionID.setText("REGION: " + s[Integer.parseInt(item.getRegion())]);

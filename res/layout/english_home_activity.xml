@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent" 
+    android:background="#D6D2D4">
 
     <TableLayout
         android:layout_width="match_parent"
@@ -22,6 +23,7 @@
                 android:layout_weight="1"
                 android:text="Learn..."
                 android:gravity="center"
+                android:textColor="#555555"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
         
             <TextView
@@ -31,6 +33,7 @@
                 android:layout_weight="1"
                 android:text="Search..."
                 android:gravity="center"
+                  android:textColor="#555555"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
         
         </TableRow>
@@ -47,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Kannada Phrases"
-                android:textSize="12sp" />
+                android:textSize="12sp"/>
             
             <Button
                 android:id="@+id/btnSearchForum"
@@ -101,6 +104,7 @@
                 android:layout_weight="1"
                 android:text="Kannada Forum..."
                 android:gravity="center"
+                android:textColor="#555555"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
         </TableRow>
             
@@ -171,35 +175,6 @@
     </TableLayout>
 
     <Button
-        android:id="@+id/btnEngNotif"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="Notifications - 0"
-        android:textSize="10sp" />
-
-    <Button
-        android:id="@+id/btnEngBadge"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:text="Points and Badges"
-        android:textSize="10sp" />
-    
-    <Button
-        android:id="@+id/btnEngMyHome"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="My Home" />
-
-    <Button
         android:id="@+id/btnsyncDB"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
@@ -207,6 +182,19 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="Sync Databases..."
+        android:textSize="10sp" 
+          android:background="#AAAAAA"/>
+
+    <Button
+        android:id="@+id/btnEngBadge"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#AAAAAA"
+        android:drawableLeft="@drawable/star"
+        android:text="Points and Badges"
         android:textSize="10sp" />
     
 </RelativeLayout>

@@ -6,6 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#D6D2D4"
     tools:context=".SignUpActivity" >
 
     <Button
@@ -16,6 +17,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="102dp"
         android:text="@string/SignUp"
+        android:background="#000000"
+        android:textColor="#FFFFFF"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
@@ -26,29 +29,37 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="282dp"
         android:text="@string/contextDictBtnTxt"
+         android:background="#777777"
+        android:textColor="#FFFFFF"
+         android:drawableRight="@drawable/search"
+       
         android:textAppearance="?android:attr/textAppearanceSmall" />
+
+     <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnSignUp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="34dp"
+        android:gravity="center"
+        
+        android:text="Please Register to use all the features of Namma App"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#333333" />
 
     <Button
         android:id="@+id/btnPhrase"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/btnDict"
         android:layout_alignLeft="@+id/btnDict"
         android:layout_alignRight="@+id/btnDict"
+        android:layout_below="@+id/btnDict"
+        android:layout_marginTop="15dp"
+        android:background="#777777"
+        android:drawableRight="@drawable/search"
         android:text="@string/phraseDictbtnTxt"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/btnSignUp"
-        android:layout_alignLeft="@+id/btnSignUp"
-        android:layout_marginBottom="45dp"
-        android:gravity="center"
-        android:text="Please Register to use all the features of Namma App"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FFFFFF" />
 </RelativeLayout>

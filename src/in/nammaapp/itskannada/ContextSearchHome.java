@@ -3,50 +3,59 @@ package in.nammaapp.itskannada;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.os.Bundle;
+import android.os.Handler;
 import android.speech.RecognizerIntent;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ListView;
 
 public class ContextSearchHome extends Activity {
 	private static final int REQUEST_CODE = 1234;
 	private ListView wordsList;
 	private EditText etext;
-	private Button searchbtn,context;
+	private ImageButton searchbtn;
+	ImageButton speakButton ;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.context_search_home);
-		Button speakButton = (Button) findViewById(R.id.spkbtn);
-		   searchbtn = (Button) findViewById(R.id.searchbtn);
+		speakButton = (ImageButton) findViewById(R.id.spkbtn);
+		   searchbtn = (ImageButton) findViewById(R.id.searchbtn);
 	      wordsList = (ListView) findViewById(R.id.list);
 	      etext=(EditText)findViewById(R.id.etext);
-			context =(Button)findViewById(R.id.button1);
-			
-	       // Disable button if no recognition service is present
+		 // Disable button if no recognition service is present
 	       PackageManager pm = getPackageManager();
 	       List<ResolveInfo> activities = pm.queryIntentActivities(
 	               new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH), 0);
 	       if (activities.size() == 0)
 	       {
+	    	   speakButton.setBackgroundResource(R.drawable.nomic);
 	           speakButton.setEnabled(false);
-	           speakButton.setText("no");
-	       }	
+	         }	
 	       searchbtn.setOnClickListener(new OnClickListener() {
 	   		public void onClick(View arg)
 	   		{
+
+	   			new Handler().postDelayed(new Runnable() {
+	   				@Override
+	   				public void run() {
+	   					searchbtn.setBackgroundColor(0xFF000000);
+	   				}
+	   			}, 1000);
+	   			searchbtn.setBackgroundColor(0xFF000099);
+	   		
 	   			if(etext.getText().toString().length()!=0)
 	   			{
 	   		Intent i = new Intent(ContextSearchHome.this,ContextDisplayMeaningActivity.class);
@@ -64,6 +73,14 @@ public class ContextSearchHome extends Activity {
 	       
 	   public void speakButtonClicked(View v)
 	      {
+		   new Handler().postDelayed(new Runnable() {
+ 				@Override
+ 				public void run() {
+ 					speakButton.setBackgroundColor(0xFF000000);
+ 				}
+ 			}, 1000);
+ 			speakButton.setBackgroundColor(0xFF000099);	
+			
 	          startVoiceRecognitionActivity();
 	      }
 

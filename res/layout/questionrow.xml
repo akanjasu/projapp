@@ -140,6 +140,7 @@
 			    android:layout_width="wrap_content"
 			    android:layout_weight=".5"
 			    android:text="Upvote IT!"
+			    android:drawableRight="@drawable/good"
 			    android:textSize="8sp"
 	            />
 	        
@@ -148,7 +149,8 @@
 	            android:layout_height="25dp"
 			    android:layout_width="wrap_content"
 			    android:layout_weight=".5"
-			    android:text="Downvote..."
+			    android:text="Downvote!"
+			    android:drawableRight="@drawable/bad"
 			    android:textSize="8sp"
 	            />
 	    

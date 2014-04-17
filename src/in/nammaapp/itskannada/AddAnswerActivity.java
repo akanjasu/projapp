@@ -102,7 +102,6 @@ public class AddAnswerActivity extends Activity {
 						protected String doInBackground(String... params) {
 							hc = new DefaultHttpClient();
 							hp = new HttpPost("http://nammaapp.in/scripts/addanswer.php");
-							//TODO change to prefs
 							ArrayList<BasicNameValuePair> postparameters = new ArrayList<BasicNameValuePair>();
 							postparameters.add(new BasicNameValuePair("Q_ID", info.getString("Q_ID")));
 							postparameters.add(new BasicNameValuePair("U_ID", pref.getString("userID", "notSet")));

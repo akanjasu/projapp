@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+        
+        
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:baselineAligned="false" >
+    
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_weight=".80" >
+    
+    <TextView
+	    android:id="@+id/txtKUSysContEng"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="ENG Word: "
+	    android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    <TextView
+	    android:id="@+id/txtKUSysContKan"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="KAN Word: "
+	    android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    
+    </LinearLayout>
+    
+    <LinearLayout
+	    android:layout_width="0dp"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:layout_weight=".20" >
+    
+        <Button 
+            android:id="@+id/btnKUSysContResolve"
+            android:layout_height="40dp"
+		    android:layout_width="wrap_content"
+		    android:text="Resolve Context"
+		    android:textSize="8sp" />
+	</LinearLayout>
+    </LinearLayout>    
+    
+
+</LinearLayout>

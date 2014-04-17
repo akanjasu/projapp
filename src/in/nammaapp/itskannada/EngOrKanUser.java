@@ -25,6 +25,9 @@ public class EngOrKanUser extends Activity {
 			@Override
 			public void onClick(View v) {
 				editor = pref.edit();
+				editor.putInt("score", 0);
+				editor.putInt("badgeno", 0);
+				editor.putInt("tscore", 0);
 				editor.putString("kannada", "true");
 				editor.commit();
 				Intent i = new Intent(EngOrKanUser.this, SignUpActivity.class);
@@ -36,6 +39,9 @@ public class EngOrKanUser extends Activity {
 			@Override
 			public void onClick(View v) {
 				editor = pref.edit();
+				editor.putInt("score", 0);
+				editor.putInt("badgeno", 0);
+				editor.putInt("tscore", 0);
 				editor.putString("kannada", "false");
 				editor.commit();
 				Intent i = new Intent(EngOrKanUser.this, SignUpActivity.class);

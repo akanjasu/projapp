@@ -128,9 +128,7 @@ TextToSpeech.OnInitListener {
 					
 					@Override
 					public void onClick(View v) {
-						 Toast.makeText(getApplicationContext(),
-								    "hello hi", Toast.LENGTH_SHORT).show();
-							 
+						
 						// TODO Auto-generated method stub
 						if(tv2.getText().length()!=0)
 						{
@@ -248,7 +246,7 @@ TextToSpeech.OnInitListener {
 			int result = tts.setLanguage(Locale.US);
 			tts.setSpeechRate((float) 0.7);
 			tts.setPitch((float)3.5);
-			
+			//45
 			
 			// tts.setPitch(5); // set pitch level
 

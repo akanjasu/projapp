@@ -18,7 +18,7 @@
         android:id="@+id/textcontext"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#00CCFF"
+        android:background="#AAAAAA"
         android:text="Small Text"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textSize="16dp" />

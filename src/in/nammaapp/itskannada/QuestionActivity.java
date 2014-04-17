@@ -13,6 +13,7 @@ import org.apache.http.message.BasicNameValuePair;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -78,7 +79,6 @@ public class QuestionActivity extends Activity {
 							hc = new DefaultHttpClient();
 							hp = new HttpPost("http://nammaapp.in/scripts/addquestion.php");
 							ArrayList<BasicNameValuePair> postparameters = new ArrayList<BasicNameValuePair>();
-							//TODO change to prefs when integrated
 							postparameters.add(new BasicNameValuePair("U_ID", pref.getString("userID", "notSet")));
 							postparameters.add(new BasicNameValuePair("token", pref.getString("token", "notSet")));
 							postparameters.add(new BasicNameValuePair("question", question.getText().toString()));
@@ -106,7 +106,13 @@ public class QuestionActivity extends Activity {
 						@Override
 						protected void onPostExecute(String result) {
 							Toast.makeText(getApplicationContext(), "Question Successfully Posted", Toast.LENGTH_LONG).show();
-							//TODO write intent to redirect to home screen
+							if(pref.getString("kannada", "notSet") == "true"){
+								Intent i = new Intent(QuestionActivity.this, KannadaHomeActivity.class);
+								startActivity(i);
+							} else if(pref.getString("kannada", "notSet") == "false") {
+								Intent i = new Intent(QuestionActivity.this, EnglishHomeActivity.class);
+								startActivity(i);
+							}
 						}
 					};
 					postquestiontask.execute();

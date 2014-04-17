@@ -7,14 +7,16 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ContextSearchHome" >
-<Button
+<ImageButton
     android:id="@+id/spkbtn"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
     android:layout_above="@+id/list"
     android:layout_toLeftOf="@+id/searchbtn"
     android:onClick="speakButtonClicked"
-    android:text="Click Me!" />
+     android:src="@drawable/mic"
+    android:background="#000000" />
+
 
      <EditText
          android:id="@+id/etext"
@@ -37,12 +39,14 @@
        android:layout_below="@+id/etext"
        android:layout_weight="1" />
 
-<Button
+<ImageButton
     android:id="@+id/searchbtn"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
     android:layout_alignBaseline="@+id/spkbtn"
     android:layout_alignBottom="@+id/spkbtn"
     android:layout_alignRight="@+id/list"
-    android:text="Search" />
+     android:src="@drawable/search" 
+    android:background="#000000"/>
+
 </RelativeLayout>

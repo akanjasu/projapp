@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent" 
+     android:background="#D6D2D4" >
 
     <TableLayout
         android:layout_width="match_parent"
@@ -22,6 +23,7 @@
                 android:layout_weight="1"
                 android:text="Help..."
                 android:gravity="center"
+                  android:textColor="#555555"
                 android:textAppearance="?android:attr/textAppearanceMedium" />        
         </TableRow>
             
@@ -38,15 +40,6 @@
                 android:layout_weight="1"
                 android:text="Translate Kannada Phrases"
                 android:textSize="10sp" />
-            
-            <Button
-                android:id="@+id/btnPrnWord"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="0dip"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Pronunce a Word"
-                android:textSize="12sp" />
             
                         
         </TableRow>
@@ -108,6 +101,7 @@
                 android:layout_weight="1"
                 android:text="Kannada Forum..."
                 android:gravity="center"
+                 android:textColor="#555555"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
         </TableRow>
             
@@ -138,34 +132,5 @@
 
         
     </TableLayout>
-
-    <Button
-        android:id="@+id/btnKanNotif"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="Notifications - 0"
-        android:textSize="10sp" />
-
-    <Button
-        android:id="@+id/btnKanBadge"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:text="Points and Badges"
-        android:textSize="10sp" />
-
-    <Button
-        android:id="@+id/btnKanMyHome"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="My Home" />
     
 </RelativeLayout>

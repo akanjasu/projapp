@@ -8,20 +8,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".SearchActivity" >
 
-    <Button
-        android:id="@+id/btnsearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText1"
-        android:layout_alignParentRight="true"
-        android:text="Search" />
-
     <EditText
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Qlist"
         android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/button1"
+        android:layout_toLeftOf="@+id/btnsearch"
         android:ems="10"
         android:inputType="textMultiLine" />
 
@@ -33,5 +26,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp" >
     </ListView>
+
+    <ImageButton
+        android:id="@+id/btnsearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/Qlist"
+        android:layout_alignTop="@+id/editText1"
+        android:background="#000000"
+        android:src="@drawable/search" />
 
 </RelativeLayout>

@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+     android:background="#D6D2D4"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -57,8 +58,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/btnMyQues"
-        android:layout_alignRight="@+id/btnMyQues"
-        android:layout_below="@+id/btnMyQues"
+          android:layout_below="@+id/btnMyQues"
+         android:layout_marginTop="15dp"
+        android:background="#000000"
+        android:textColor="#FFFFFF"
         android:text="My Answers" />
 
     <Button
@@ -68,7 +71,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="144dp"
-        android:text="My Questions" />
+        android:text="My Questions"
+        android:background="#000000"
+        android:textColor="#FFFFFF" />
 
 
 </RelativeLayout>

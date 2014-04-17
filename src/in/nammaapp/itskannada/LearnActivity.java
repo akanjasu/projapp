@@ -6,10 +6,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
@@ -23,7 +27,7 @@ private SQLiteDatabase db;
 private TextView tv;
 private SimpleCursorAdapter dataAdapter;
 private Cursor cursor;
-private Button nxt;
+private ImageButton nxt,play;
 private Intent i;
 
 @Override
@@ -33,7 +37,8 @@ private Intent i;
 		key=getIntent().getExtras().getInt("key");
 		lv = (ListView) findViewById(R.id.wordlist);
 		tv = (TextView) findViewById(R.id.wordtxt);
-		nxt = (Button) findViewById(R.id.btnnxt);
+		nxt = (ImageButton) findViewById(R.id.btnnxt);
+		play=(ImageButton)findViewById(R.id.play);
 		i= new Intent(this,TutorOptions.class);
 		
 		myDbHelper = new DBahelper(this);
@@ -76,7 +81,54 @@ private Intent i;
 
 				else if(key==7)		
 					contextcall();
+				
 					
+				play.setOnClickListener(new View.OnClickListener() {
+					
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						new AsyncTask<String,Void,String>(){
+
+							@Override
+							protected void onPreExecute()
+							{
+								
+							}
+							@Override
+							protected String doInBackground(String... arg0) {
+								// TODO Auto-generated method stub
+								return arg0[0];
+							}
+							
+							@Override
+							protected void onPostExecute(String content)
+							{
+								try
+								  {
+									    MediaPlayer player = new MediaPlayer();
+									    player.setAudioStreamType(AudioManager.STREAM_MUSIC);
+									   // player.setOnPreparedListener(this);
+						                
+									    player.setDataSource("http://nammaapp.in/audiofiles/"+content+".mp3"
+									            );
+									    player.prepare();
+									    player.start();
+
+									} catch (Exception e) {
+									    // TODO: handle exception
+										Toast.makeText(getApplicationContext(),
+											    "Sorry cannot Pronounce", Toast.LENGTH_SHORT).show();
+												
+									}
+								
+							}
+							
+						}.execute(tv.getText().toString());
+						
+
+					}
+				});
 			
 				nxt.setOnClickListener(new View.OnClickListener() {
 					
@@ -109,12 +161,16 @@ private Intent i;
 
 	public void poscall(int key,String pos)
 	{
+		play.setVisibility(View.VISIBLE);
 		db = myDbHelper.getWritableDatabase();
-	cursor= db.rawQuery("SELECT engword _id from POSTable where consulted = 0 and pos = \""+key+"\"ORDER BY RANDOM()", null);
+	cursor= db.rawQuery("SELECT engword _id,consulted from POSTable where pos = \""+key+"\"ORDER BY RANDOM()", null);
 	String id;
 	 if(cursor.moveToFirst())
 	  {
 		 id=cursor.getString(cursor.getColumnIndex("_id")).toString();
+		 if(cursor.getInt(cursor.getColumnIndex("consulted"))==1)
+			 Toast.makeText(getApplicationContext(), "This word is already seen",Toast.LENGTH_SHORT ).show();
+		 
 		 db.execSQL("UPDATE POSTable SET consulted = 1 WHERE engword = \""+id+"\"");
 		  tv.setText(id);
 		  Cursor cursor3 = db.rawQuery("SELECT kanword _id,engcontext from POSTable where engword = \""+id+"\" and pos = \""+key+"\"",null);
@@ -124,15 +180,15 @@ private Intent i;
 				  };
 		
 		 int[] to2 = new int[] { 
-				    R.id.kanword,
-				    R.id.context
+				    R.id.kanword1,
+				    R.id.context1
 				   
 				    };
 				 
 				  // create the adapter using the cursor pointing to the desired data 
 				  //as well as the layout information
 				  dataAdapter = new SimpleCursorAdapter(
-				    this, R.layout.wordcontextdisplaylayout, 
+				    this, R.layout.wordcontextwithoutbutton, 
 				    cursor3, 
 				    columns2, 
 				    to2,
@@ -152,12 +208,15 @@ private Intent i;
 
 	public void contextcall()
 	{
+		play.setVisibility(View.INVISIBLE);
 		db = myDbHelper.getWritableDatabase();
-		cursor= db.rawQuery("SELECT engword _id from ClientContextTable where consulted = 0 ORDER BY RANDOM()", null);
+		cursor= db.rawQuery("SELECT engword _id,consulted from ClientContextTable where done<>1 ORDER BY RANDOM()", null);
 		String id;
 		 if(cursor.moveToFirst())
 		  {
 			 id=cursor.getString(cursor.getColumnIndex("_id")).toString();
+			 if(cursor.getInt(cursor.getColumnIndex("consulted"))==1)
+				 Toast.makeText(getApplicationContext(), "This word is already seen",Toast.LENGTH_SHORT ).show();
 			 db.execSQL("UPDATE ClientContextTable SET consulted = 1 WHERE engword = \""+id+"\"");
 			  tv.setText(id);
 			  Cursor cursor2 = db.rawQuery("SELECT kanword _id,engcontext from ClientContextTable where engword = \""+id+"\"",null);
@@ -167,15 +226,15 @@ private Intent i;
 					  };
 			
 			 int[] to = new int[] { 
-					    R.id.kanword,
-					    R.id.context
+					    R.id.kanword1,
+					    R.id.context1
 					   
 					    };
 					 
 					  // create the adapter using the cursor pointing to the desired data 
 					  //as well as the layout information
 					  dataAdapter = new SimpleCursorAdapter(
-					    this, R.layout.wordcontextdisplaylayout, 
+					    this, R.layout.wordcontextwithoutbutton, 
 					    cursor2, 
 					    columns, 
 					    to,

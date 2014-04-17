@@ -62,7 +62,7 @@
             android:label="@string/title_activity_phrase_search" >
         </activity>
         <activity
-            android:name="in.nammaapp.itskannada.RequestPhraseTranslateActivity"
+            android:name="in.nammaapp.itskannada.EngPhraseRequestHomeActivity"
             android:label="@string/title_activity_request_phrase_translate" >
         </activity>
         <activity
@@ -86,11 +86,11 @@
             android:label="@string/title_activity_forum" >
         </activity>
         <activity
-            android:name="in.nammaapp.itskannada.ResponsePhraseTranslateActivity"
+            android:name="in.nammaapp.itskannada.RequestListActivity"
             android:label="@string/title_activity_phrase_request" >
         </activity>
         <activity
-            android:name="in.nammaapp.itskannada.WordContextResActivity"
+            android:name="in.nammaapp.itskannada.ContextRequestEngHomeActivity"
             android:label="@string/title_activity_word_context_res" >
         </activity>
         <activity
@@ -156,6 +156,78 @@
         <activity
             android:name="in.nammaapp.itskannada.ContextDisplayMeaningActivity"
             android:label="@string/title_activity_context_display_meaning" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.RegionalPointsListActivity"
+            android:label="@string/title_activity_regional_points_list" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.XPPointsActivity"
+            android:label="@string/title_activity_xppoints" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.QUpPointsActivity"
+            android:label="@string/title_activity_qup_points" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.AUpPointsActivity"
+            android:label="@string/title_activity_aup_points" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.MyPointsDisplayActivity"
+            android:label="@string/title_activity_my_points_display" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.PracticeTest"
+            android:label="@string/title_activity_practice_test" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.TestOptions"
+            android:label="@string/title_activity_test_options" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.PracticeTestOptions"
+            android:label="@string/title_activity_practice_test_options" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.RequestPhraseTranslateActivity"
+            android:label="@string/title_activity_request_phrase_translate" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.MyPhraseRequestsActivity"
+            android:label="@string/title_activity_my_phrase_requests" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.ProvideTranslateActivity"
+            android:label="@string/title_activity_provide_translate" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.RequestContextResolutionActivity"
+            android:label="@string/title_activity_request_context_resolution" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.MyContextResolutionActivity"
+            android:label="@string/title_activity_my_context_resolution" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.KanPhraseHomeActivity"
+            android:label="@string/title_activity_kan_phrase_home" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.ContextKanHomeActivity"
+            android:label="@string/title_activity_context_kan_home" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.ResolveSystemContextRequestsActivity"
+            android:label="@string/title_activity_resolve_system_context_requests" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.ResolveContextFormActivity"
+            android:label="@string/title_activity_resolve_context_form" >
+        </activity>
+        <activity
+            android:name="in.nammaapp.itskannada.ResolveUserContextRequestsActivity"
+            android:label="@string/title_activity_resolve_user_context_requests" >
         </activity>
     </application>
 

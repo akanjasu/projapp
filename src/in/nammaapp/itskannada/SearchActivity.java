@@ -28,6 +28,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -37,6 +38,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -45,7 +47,7 @@ public class SearchActivity extends Activity {
 	private static ArrayList<Elements> ar;		
 	private ArrayList<QuestionItem> questions;
 	private EditText etxt;
-	private Button sbtn;
+	private ImageButton sbtn;
 	ListView lv;
 	public static int i=0,j=0,k=0;
 	HttpClient hc;
@@ -65,13 +67,21 @@ public class SearchActivity extends Activity {
 		ar = new ArrayList<Elements>();
 		questions = new ArrayList<QuestionItem>();
 		etxt=(EditText) findViewById(R.id.editText1);
-		sbtn=(Button) findViewById(R.id.btnsearch);
+		sbtn=(ImageButton) findViewById(R.id.btnsearch);
 		lv = (ListView) findViewById(R.id.Qlist);
 		
 		sbtn.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
+				new Handler().postDelayed(new Runnable() {
+	   				@Override
+	   				public void run() {
+	   					sbtn.setBackgroundColor(0xFF000000);
+	   				}
+	   			}, 1000);
+	   			sbtn.setBackgroundColor(0xFF000099);
+	   			
 				questions.clear();
 				ar.clear();
 				i=0;
@@ -191,12 +201,14 @@ public class SearchActivity extends Activity {
 								  }
 							};
 							lv.setAdapter(q);
+							sbtn.setBackgroundColor(0xFF000000);
 							}
 							else
 							{
 							lv.setAdapter(null);
 							Toast.makeText(getApplicationContext(),
 								    "No relevant Questions found", Toast.LENGTH_SHORT).show();
+							sbtn.setBackgroundColor(0xFF000000);
 							}
 					
 						}

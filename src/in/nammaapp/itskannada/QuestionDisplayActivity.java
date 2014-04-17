@@ -83,9 +83,9 @@ public class QuestionDisplayActivity extends Activity {
         qupvotes.setText("Upvotes: " + info.getString("upvotes"));
         qanscount.setText("Answers: " + info.getString("answercount"));
         qname.setText(info.getString("name"));
-        qusrxp.setText("XP: " + info.getString("userxp"));
-        qusrqup.setText("Q Up: " + info.getString("userqupvotes"));
-        quseraup.setText("A Up: " + info.getString("useransupvotes"));
+        qusrxp.setText("");
+        qusrqup.setText("");
+        quseraup.setText("");
         
         btnupvoteq.setOnClickListener(new OnClickListener() {
 			

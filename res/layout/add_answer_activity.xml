@@ -220,16 +220,6 @@
 		    android:ems="10" />
 
 		<Button
-		    android:id="@+id/buttonPronunceCapture"
-		    style="?android:attr/buttonStyleSmall"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:layout_alignParentLeft="true"
-		    android:layout_below="@+id/kanwordContent"
-		    android:text="Provide Pronunciation"
-		    android:textSize="10sp" />
-
-		<Button
 		    android:id="@+id/buttonSubmitAnswer"
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"

@@ -42,6 +42,11 @@
         <item>Mandya-Kanakapura-Magadi-Kunigal-Chamaraajanagar</item>
         <item>Other</item>
     </string-array>
+    <string-array name="points_type">
+        <item>XP Points</item>
+        <item>Question Up Points</item>
+        <item>Answer Up Points</item>
+    </string-array>
 
     <string name="title_activity_request_phrase_translate">Request Phrase Translate</string>
     <string name="title_activity_search_forum">Search the Forum</string>
@@ -73,5 +78,22 @@
     <string name="title_activity_sync">Sync</string>
     <string name="title_activity_context_search_home">Context Based Search</string>
     <string name="title_activity_context_display_meaning">Context Based Meaning</string>
+    <string name="title_activity_regional_points_list">Regional Leaderboard</string>
+    <string name="title_activity_xppoints">XP Points</string>
+    <string name="title_activity_qup_points">QUp Points</string>
+    <string name="title_activity_aup_points">AUpPoints</string>
+    <string name="title_activity_my_points_display">My Points</string>
+    <string name="title_activity_practice_test">Practice Test</string>
+    <string name="title_activity_test_options">Test Options</string>
+    <string name="title_activity_practice_test_options">Practice Test Options</string>
+    <string name="title_activity_my_phrase_requests">My Phrase Requests</string>
+    <string name="title_activity_provide_translate">Provide Translate</string>
+    <string name="title_activity_request_context_resolution">Request Context Resolution</string>
+    <string name="title_activity_my_context_resolution">My Context Resolution</string>
+    <string name="title_activity_kan_phrase_home">Kannada Phrase Home</string>
+    <string name="title_activity_context_kan_home">Context Kan Home</string>
+    <string name="title_activity_resolve_system_context_requests">Resolve System Context Requests</string>
+    <string name="title_activity_resolve_context_form">Resolve Context Form</string>
+    <string name="title_activity_resolve_user_context_requests">Resolve User Context Requests</string>
 
 </resources>

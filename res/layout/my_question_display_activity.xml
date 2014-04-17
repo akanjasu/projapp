@@ -143,14 +143,16 @@
                 android:layout_height="25dp"
                 android:layout_weight=".5"
                 android:text="Upvote IT!"
-                android:textSize="8sp" />
+                android:textSize="8sp"
+                android:drawableRight="@drawable/good" />
 
             <Button
                 android:id="@+id/btnQDownvoteA"
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:layout_weight=".5"
-                android:text="Downvote..."
+                android:text="Downvote!"
+                 android:drawableRight="@drawable/bad"
                 android:textSize="8sp" />
         </LinearLayout>
     </LinearLayout>

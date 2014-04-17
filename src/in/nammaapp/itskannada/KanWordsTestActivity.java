@@ -10,6 +10,7 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -29,6 +30,7 @@ public class KanWordsTestActivity extends Activity {
 	private DBahelper myDbHelper ;
 	private SQLiteDatabase db;
 	private TextView tv;
+	SharedPreferences.Editor editor;
 	private String[] a = {"a","b","c","d"};
 	public static int randomno;
 	public static String engword;
@@ -90,6 +92,30 @@ public class KanWordsTestActivity extends Activity {
 					{
 						Toast.makeText(getApplicationContext(),
 							    "Your score is "+score+" out of "+quesno+".... Take up next Test", Toast.LENGTH_LONG).show();
+						int scorepref=pref.getInt("score", 0);
+						score=score+scorepref;
+						
+						if(score>=10)
+						{
+							editor = pref.edit();
+							editor.putInt("badgeno",pref.getInt("badgeno",0)+1);
+							editor.putInt("score", score-10);
+							editor.putInt("tscore",pref.getInt("tscore",0)+score-scorepref);
+							editor.commit();
+							Toast.makeText(getApplicationContext(),
+								    "You have won a new BADGE!!", Toast.LENGTH_LONG).show();
+							
+							
+						}
+						else
+						{
+							editor=pref.edit();
+							editor.putInt("score", score);
+							editor.putInt("tscore",pref.getInt("tscore",0)+score-scorepref);
+							editor.commit();
+						}
+						
+
 						int xp = Integer.parseInt(pref.getString("xppoints", "0"));
 						xp += 1;
 						SharedPreferences.Editor editor = pref.edit();
@@ -160,6 +186,22 @@ public class KanWordsTestActivity extends Activity {
 		}
 		
 		
+	}
+	//@Override
+//	public boolean onKeyDown(int keyCode, KeyEvent event) {
+//	    if (keyCode == KeyEvent.KEYCODE_BACK) {
+//	    	Intent i=new Intent(KanWordsTestActivity.this,TestOptions.class);
+//	        startActivity(i);
+//	        return true;
+//	    }
+//	    return super.onKeyDown(keyCode, event);
+//	}
+	
+	@Override
+	public void onBackPressed() {
+		// TODO Auto-generated method stub
+		super.onBackPressed();
+		finish();
 	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

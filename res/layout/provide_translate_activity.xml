@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ProvideTranslateActivity" >
+	
+	<TextView
+	    android:id="@+id/fkdfdw"
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:text="Asked By:"
+	    android:gravity="center"
+	    android:textAppearance="?android:attr/textAppearanceSmall"
+	    android:textStyle="bold"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true" />    
+
+	<LinearLayout
+	    android:id="@+id/ll1"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_below="@+id/fkdfdw"
+	    android:layout_alignParentLeft="true" >
+    
+	    <TextView
+			    android:id="@+id/txtRAUPUsername"
+			    android:layout_height="wrap_content"
+			    android:layout_width="match_parent"
+			    android:text="Username: "
+			    android:layout_weight=".25"
+			    android:gravity="left"
+			    android:textSize="10sp"
+			    android:textStyle="bold" />
+        
+        <TextView
+			    android:id="@+id/txtRAUPXP"
+			    android:layout_height="wrap_content"
+			    android:layout_width="match_parent"
+			    android:text="XP:"
+			    android:layout_weight=".25"
+			    android:gravity="left"
+			    android:textSize="10sp" />
+        
+        <TextView
+			    android:id="@+id/txtRAUPQUp"
+			    android:layout_height="wrap_content"
+			    android:layout_width="match_parent"
+			    android:text="Q Up:"
+			    android:layout_weight=".25"
+			    android:gravity="left"
+			    android:textSize="10sp" />
+        
+        <TextView
+			    android:id="@+id/txtRAUPAUp"
+			    android:layout_height="wrap_content"
+			    android:layout_width="match_parent"
+			    android:text="A Up:"
+			    android:layout_weight=".25"
+			    android:gravity="left"
+			    android:textSize="10sp" />
+        
+	</LinearLayout>
+	
+	<TextView
+		    android:id="@+id/PhraseRAEngTitle"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/ll1"
+		    android:layout_marginTop="15dp"
+		    android:gravity="left"
+		    android:text="Eng Phrase:"
+		    android:textAppearance="?android:attr/textAppearanceSmall" />
+	<EditText
+		    android:id="@+id/engRAPhraseContent"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/PhraseRAEngTitle"
+		    android:ems="10"
+		    android:inputType="textMultiLine" >
+
+		    <requestFocus />
+	</EditText>
+	<TextView
+		    android:id="@+id/PhraseRAKanTitle"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/engRAPhraseContent"
+		    android:layout_marginTop="15dp"
+		    android:gravity="left"
+		    android:text="Kan Phrase:"
+		    android:textAppearance="?android:attr/textAppearanceSmall" />
+	<EditText
+		    android:id="@+id/kanRAPhraseContent"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/PhraseRAKanTitle"
+		    android:ems="10"
+		    android:inputType="textMultiLine" />
+	<TextView
+		    android:id="@+id/PhraseRARegionTitle"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/kanRAPhraseContent"
+		    android:layout_marginTop="15dp"
+		    android:gravity="left"
+		    android:text="Region:"
+		    android:textAppearance="?android:attr/textAppearanceSmall" />
+	<Spinner
+	        android:id="@+id/spnRegion4phrasereqA"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/PhraseRARegionTitle"
+	        android:entries="@array/region_arrays" />
+	<Button
+		    android:id="@+id/btnSubmitPhraseResp"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignLeft="@+id/spnRegion4phrasereqA"
+		    android:layout_below="@+id/spnRegion4phrasereqA"
+		    android:text="Submit" />
+
+</RelativeLayout>

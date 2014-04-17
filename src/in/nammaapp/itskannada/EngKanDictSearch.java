@@ -8,30 +8,31 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
+import android.os.Handler;
 import android.speech.RecognizerIntent;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 public class EngKanDictSearch extends Activity {
 	private static final int REQUEST_CODE = 1234;
 	private ListView wordsList;
 	private EditText etext;
-	private Button searchbtn;
+	private ImageButton searchbtn;
+	ImageButton speakButton;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
 	
-	  Button speakButton = (Button) findViewById(R.id.spkbtn);
-	   searchbtn = (Button) findViewById(R.id.searchbtn);
+	   speakButton = (ImageButton) findViewById(R.id.spkbtn);
+	   searchbtn = (ImageButton) findViewById(R.id.searchbtn);
       wordsList = (ListView) findViewById(R.id.list);
       etext=(EditText)findViewById(R.id.etext);
 		
@@ -41,8 +42,9 @@ public class EngKanDictSearch extends Activity {
                new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH), 0);
        if (activities.size() == 0)
        {
+    	   speakButton.setBackgroundResource(R.drawable.nomic);
            speakButton.setEnabled(false);
-           speakButton.setText("no");
+          
        }	
        
       searchbtn.setOnClickListener(new OnClickListener() {
@@ -65,6 +67,14 @@ public class EngKanDictSearch extends Activity {
     
 public void speakButtonClicked(View v)
    {
+	new Handler().postDelayed(new Runnable() {
+	@Override
+	public void run() {
+		speakButton.setBackgroundColor(0xFF000000);
+	}
+	}, 1000);
+		speakButton.setBackgroundColor(0xFF000099);	
+
        startVoiceRecognitionActivity();
    }
 

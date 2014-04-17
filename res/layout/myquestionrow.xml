@@ -92,20 +92,22 @@
 	    
 	    <Button 
 	            android:id="@+id/btnMyQEdit"
-	            android:layout_height="25dp"
+	            android:layout_height="35dp"
 			    android:layout_width="wrap_content"
 			    android:layout_weight=".5"
 			    android:text="Edit..."
-			    android:textSize="8sp"
+			    android:textSize="12sp"
+			    android:drawableRight="@drawable/edit"
 	            />
 	        
 	    <Button 
 	            android:id="@+id/btnMyQDelete"
-	            android:layout_height="25dp"
+	            android:layout_height="35dp"
 			    android:layout_width="wrap_content"
 			    android:layout_weight=".5"
 			    android:text="Delete..."
-			    android:textSize="8sp"
+			    android:textSize="12sp"
+			    android:drawableRight="@drawable/discard"
 	            />
 	    
 	</LinearLayout>

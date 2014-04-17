@@ -8,31 +8,84 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".RequestPhraseTranslateActivity" >
 
-    <LinearLayout 
+   <TextView
+        android:id="@+id/Phrasetitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:orientation="horizontal">
+        android:layout_centerHorizontal="true"
+        android:text="Add Request (English or Kannada)..."
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold" />
+    
+    <TextView
+		    android:id="@+id/PhraseREngTitle"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/Phrasetitle"
+		    android:layout_marginTop="15dp"
+		    android:gravity="left"
+		    android:text="Eng Phrase:"
+		    android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <EditText
-            android:id="@+id/editText1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight=".7"
-            android:ems="10" >
+		<EditText
+		    android:id="@+id/engPhraseContent"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/PhraseREngTitle"
+		    android:ems="10"
+		    android:inputType="textMultiLine" >
 
-            <requestFocus />
-        </EditText>
+		    <requestFocus />
+		</EditText>
+    
+		<TextView
+		    android:id="@+id/PhraseRKanTitle"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/engPhraseContent"
+		    android:layout_marginTop="15dp"
+		    android:gravity="left"
+		    android:text="Kan Phrase:"
+		    android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_weight=".3"
-            android:text="Submit"
-            android:textSize="12sp" />
-        
-    </LinearLayout>
+		<EditText
+		    android:id="@+id/kanPhraseContent"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/PhraseRKanTitle"
+		    android:ems="10"
+		    android:inputType="textMultiLine" />
+		
+		<TextView
+		    android:id="@+id/PhraseRRegionTitle"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_below="@+id/kanPhraseContent"
+		    android:layout_marginTop="15dp"
+		    android:gravity="left"
+		    android:text="Region:"
+		    android:textAppearance="?android:attr/textAppearanceSmall" />
+		
+		<Spinner
+	        android:id="@+id/spnRegion4phrasereq"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/PhraseRRegionTitle"
+	        android:entries="@array/region_arrays" />
 
+		<Button
+		    android:id="@+id/btnSubmitPhraseReq"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignLeft="@+id/spnRegion4phrasereq"
+		    android:layout_below="@+id/spnRegion4phrasereq"
+		    android:text="Submit" />
+		
 </RelativeLayout>

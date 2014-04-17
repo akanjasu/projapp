@@ -96,9 +96,9 @@ TextToSpeech.OnInitListener {
 						   Cursor cursor = (Cursor) listView.getItemAtPosition(position);
 						 
 						   // Get the state's capital from this row in the database.
-						   String engword = 
-						   tv2.getText().toString();
-						   Cursor cursor3 = db.rawQuery("SELECT kanword _id,engcontext FROM ClientContextTable where engword = \""+engword+"\"", null);
+						   String kanword = 
+								    cursor.getString(cursor.getColumnIndexOrThrow("_id"));
+													   Cursor cursor3 = db.rawQuery("SELECT kanword _id,engcontext FROM ClientContextTable where _id = \""+kanword+"\"", null);
 						 if(cursor3.moveToFirst())
 						 {
 							 String ttsString = cursor3.getString(cursor3.getColumnIndex("_id"));

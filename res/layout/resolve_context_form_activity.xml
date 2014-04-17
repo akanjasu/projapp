@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ResolveContextFormActivity" >
+
+    <TextView
+        android:id="@+id/txtContResTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:text="Resolve a Context"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold"/>
+	<TextView
+        android:id="@+id/txtContResEngwordTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtContResTitle"
+        android:layout_alignParentLeft="true"
+        android:text="English Word:"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+	<EditText
+        android:id="@+id/contextResEngWordcontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtContResEngwordTitle"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+    
+	<TextView
+        android:id="@+id/txtContResKanwordTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contextResEngWordcontent"
+        android:layout_alignParentLeft="true"
+        android:text="Kannada Word:"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+	<EditText
+        android:id="@+id/contextResKanWordcontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtContResKanwordTitle"
+        android:ems="10" >
+    </EditText>
+	<TextView
+        android:id="@+id/txtContResContTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contextResKanWordcontent"
+        android:layout_alignParentLeft="true"
+        android:text="Context:"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+	<EditText
+        android:id="@+id/contextContextcontentRes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtContResContTitle"
+        android:ems="10" >
+    </EditText>
+	<TextView
+        android:id="@+id/txtContResRegionitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contextContextcontentRes"
+        android:layout_alignParentLeft="true"
+        android:text="Region:"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+	<Spinner
+        android:id="@+id/spn4contextRes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtContResRegionitle"
+        android:entries="@array/region_arrays" />
+	<Button
+        android:id="@+id/btnSubmitContRes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spn4contextRes"
+        android:layout_below="@+id/spn4contextRes"
+        android:text="Submit" />
+
+</RelativeLayout>
